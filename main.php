@@ -46,8 +46,8 @@ function limpiar_cadena($cadena) {
     return $cadena;
 }
 
-#funcion renombrar archivos #
-function renombrar_archivos($nombre) {
+#funcion renombrar fotos #
+function renombrar_fotos($nombre) {
     $nombre=str_ireplace(" ", "-", $nombre);
     $nombre=str_ireplace("/", "-", $nombre);
     $nombre=str_ireplace("#", "-", $nombre);

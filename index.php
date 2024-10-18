@@ -2,16 +2,6 @@
 header('Content-Type: text/html; charset=utf-8');
 mb_internal_encoding('UTF-8');
 
-// Habilitar CORS en PHP
-header("Access-Control-Allow-Origin: *");
-header("Access-Control-Allow-Methods: POST, GET, OPTIONS");
-header("Access-Control-Allow-Headers: Content-Type, Authorization");
-
-if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
-    http_response_code(200);
-    exit();
-}
-
 require './main.php';
 require './flight/Flight.php';
 
@@ -22,8 +12,24 @@ Flight::route('/', function () {
     echo 'Hola Mundo!';
 });
 
-/* API CON ALUMNOS */
+/* API CON CONTACTOS */
 
+// Validar los datos de entrega
+require './contactos/post-send-contacto.php';
 
+// Lectura de los registros de contacto existentes
+require './contactos/get-read-contactos.php';
+
+// Lectura de los registros de contacto existentes de un solo registro
+require './contactos/get-read-contacto.php';
+
+// Borrar registro de la tabla de contacto mediante peticion DELETE
+require './contactos/detelete-delete-contacto.php';
+
+// Actualizar registro de la tabla de contacto mediante peticion PUT
+require './contactos/post-update-contacto.php';
+
+// Lectura de los registros de contactos en base a una busqueda
+require './contactos/get-search-contactos.php';
 
 Flight::start();

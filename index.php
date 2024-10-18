@@ -1,8 +1,8 @@
 <?php
 // Datos de la conexión a la base de datos
-$host = 'mysql-sistema10.alwaysdata.net';
-$dbname = 'sistema10_escolar';
-$username = 'sistema10'; // Cambia el usuario si es diferente
+$host = 'mysql-practicas.alwaysdata.net';
+$dbname = 'practicas_pruebas';
+$username = 'practicas'; // Cambia el usuario si es diferente
 $password = 'SistemaGestor00';     // Cambia la contraseña si es diferente
 
 try {
